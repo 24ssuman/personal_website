@@ -3,183 +3,128 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suman Saha | Academic CV</title>
+    <title>Suman Saha | Computational Chemistry</title>
     <meta
       name="description"
-      content="Personal academic website of Suman Saha, Ph.D. student in Chemistry at UC San Diego."
+      content="Personal academic website of Suman Saha, Ph.D. Candidate in Chemistry at UC San Diego."
     />
+    <link rel="preload" href="assets/research-background.png" as="image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="bg-shape bg-shape-a"></div>
-    <div class="bg-shape bg-shape-b"></div>
-
-    <header class="hero">
-      <p class="updated">Academic CV website</p>
-      <h1>Suman Saha</h1>
-      <p class="subtitle">Graduate Student in Chemistry at UC San Diego</p>
-      <div class="contact-links">
-        <a href="mailto:s7saha@ucsd.edu">s7saha@ucsd.edu</a>
-        <a href="https://linkedin.com/in/saha-suman" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=bfwWShIAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
-        <a href="https://orcid.org/0009-0000-3877-6961" target="_blank" rel="noreferrer">ORCID</a>
-      </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html">Suman Saha</a>
+        <div class="nav-links">
+          <a aria-current="page" href="index.html">Home</a>
+          <a href="research.html">Research</a>
+          <a href="publications.html">Papers</a>
+          <a href="experience.html">Work</a>
+          <a href="teaching.html">Teach</a>
+        </div>
+      </nav>
     </header>
 
-    <main class="container">
-      <section>
-        <h2>Education</h2>
-        <article class="card">
-          <h3>University of California San Diego</h3>
-          <p>Ph.D. in Chemistry | Supervisor: Prof. Francesco Paesani</p>
-          <p class="meta">Expected graduation year: 2028 | GPA: 3.9/4.0</p>
-        </article>
-        <article class="card">
-          <h3>Indian Institute of Technology Kanpur</h3>
-          <p>M.S. in Chemistry</p>
-          <p class="meta">Jul. 2021 - Mar. 2023 | CGPA: 9.8/10.0</p>
-        </article>
-        <article class="card">
-          <h3>St. Xavier's College, Kolkata | Calcutta University</h3>
-          <p>B.S. in Chemistry</p>
-          <p class="meta">Jul. 2018 - Jun. 2021 | CGPA: 8.12/10.00</p>
-        </article>
-      </section>
+    <section class="hero hero-home" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <p class="eyebrow">Ph.D. Candidate in Chemistry | UC San Diego</p>
+        <h1 id="hero-title">Computational chemistry for water, ions, and interfaces.</h1>
+        <p class="hero-copy">
+          I study how molecular environments control hydration thermodynamics,
+          ion transport, nanoconfined water reactivity, and adsorption in porous
+          materials using data-driven many-body potentials and molecular simulation.
+        </p>
+        <div class="hero-actions" aria-label="Contact and profile links">
+          <a href="mailto:s7saha@ucsd.edu">Email</a>
+          <a href="https://linkedin.com/in/saha-suman" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=bfwWShIAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+          <a href="https://orcid.org/0009-0000-3877-6961" target="_blank" rel="noreferrer">ORCID</a>
+        </div>
+      </div>
+    </section>
 
-      <section>
-        <h2>Publications</h2>
-        <p class="note">(* corresponding author, dagger equal contribution)</p>
-        <ol class="pub-list">
-          <li>
-            Leonard Dick, Richa Rashmi, Henry Agnew, <strong>Suman Saha</strong>, Xuanyu Zhu, Barbara Kirchner, Francesco Paesani.
-            <em>Carbon Polarization and Carbon Nanotube Stacking Impacts the Behavior of Water in Nanoconfinement.</em>
-            <a href="https://doi.org/10.1021/acsnano.5c17458" target="_blank" rel="noreferrer">ACS Nano (2025)</a>
-          </li>
-          <li>
-            Saswata Dasgupta, <strong>Suman Saha</strong>, Francesco Paesani.
-            <em>Reactivity of Nanoconfined Water Is Modulated by the Properties of Confining Materials.</em>
-            <a href="https://doi.org/10.1021/acs.jpclett.5c02963" target="_blank" rel="noreferrer">J. Phys. Chem. Lett. (2025)</a>
-          </li>
-          <li>
-            Saswata Dasgupta, <strong>Suman Saha</strong>, Francesco Paesani.
-            <em>Sub-Nanometer Slit Pores Profoundly Modulate Nanoconfined Water Dissociation.</em>
-            <a href="https://doi.org/10.1021/jacs.5c08273" target="_blank" rel="noreferrer">J. Am. Chem. Soc. (2025)</a>
-          </li>
-          <li>
-            <strong>Suman Saha</strong>, Yuanhui Pan, Matthew Burigana, Vivek Singh, Omar M. Yaghi, Francesco Paesani.
-            <em>Thermodynamics of alkali metal ion uptake from aqueous solution in MOF-808.</em>
-            <a href="https://doi.org/10.1039/D5SC01596K" target="_blank" rel="noreferrer">Chem. Sci. (2025)</a>
-          </li>
-          <li>
-            Etienne Palos, Ethan F. Bull-Vulpe, Xuanyu Zhu, Henry Agnew, Shreya Gupta, <strong>Suman Saha</strong>, Francesco Paesani.
-            <em>Current status of the MB-pol data-driven many-body potential for predictive simulations of water across different phases.</em>
-            <a href="https://doi.org/10.1021/acs.jctc.4c01005" target="_blank" rel="noreferrer">J. Chem. Theory Comput. (2024)</a>
-          </li>
-          <li>
-            Vaishali Thakkur, Chandan Kumar Das, Shivani Verma, <strong>Suman Saha</strong>, Nisanth N. Nair.
-            <em>Methyl substituted beta-lactam framework based antibiotics and beta-lactamase inhibitors: Proof of concept by computations.</em>
-            <a href="https://www.biorxiv.org/content/10.1101/2024.01.14.575563v1-0.full" target="_blank" rel="noreferrer">bioRxiv (submitted)</a>
-          </li>
-        </ol>
-      </section>
-
-      <section>
-        <h2>Skills</h2>
-        <div class="grid two">
-          <article class="card">
-            <h3>Programming</h3>
-            <p>Python, Fortran, Bash</p>
+    <main id="main">
+      <section class="section section-intro" aria-labelledby="snapshot-title">
+        <div class="section-heading">
+          <p class="eyebrow">Snapshot</p>
+          <h2 id="snapshot-title">Molecular simulations for aqueous chemistry and porous materials.</h2>
+        </div>
+        <div class="metric-grid">
+          <article class="metric">
+            <strong>7</strong>
+            <span>publications and accepted manuscripts</span>
           </article>
-          <article class="card">
-            <h3>Molecular Dynamics</h3>
-            <p>LAMMPS, ASE, CHARMM, AMBER, GROMACS</p>
+          <article class="metric">
+            <strong>2028</strong>
+            <span>expected Ph.D. graduation year</span>
           </article>
-          <article class="card">
-            <h3>Quantum Mechanics</h3>
-            <p>CP2K, ORCA, Gaussian</p>
+          <article class="metric">
+            <strong>3.9</strong>
+            <span>UC San Diego graduate GPA</span>
           </article>
-          <article class="card">
-            <h3>NN Potentials</h3>
-            <p>DeepMD-kit, NequIP, MACE</p>
-          </article>
-          <article class="card full">
-            <h3>Other Software</h3>
-            <p>VMD, Avogadro2, GaussView, LaTeX, Chemdraw, GNUplot, Origin, Matlab, Mathematica</p>
+          <article class="metric">
+            <strong>MB-pol</strong>
+            <span>data-driven many-body water modeling</span>
           </article>
         </div>
       </section>
 
-      <section>
-        <h2>Teaching</h2>
-        <ul class="timeline">
-          <li>Graduate Teaching Assistant, Gen. Chem. Lectures (CHEM 6B), UC San Diego <span>Spring 2025</span></li>
-          <li>Graduate Teaching Assistant, Gen. Chem. Lab (CHEM 7L), UC San Diego <span>Spring 2024</span></li>
-          <li>Graduate Teaching Assistant, Gen. Chem. Lab (CHEM 7L), UC San Diego <span>Winter 2024</span></li>
-          <li>Graduate Teaching Assistant, Gen. Chem. Lectures (CHEM 6A), UC San Diego <span>Fall 2023</span></li>
-          <li>Doubt Clearing Educator (Online), Unacademy <span>Mar. 2021 - May 2022</span></li>
-          <li>Subject Matter Expert (Online), Chegg <span>Jul. 2021 - Aug. 2023</span></li>
-        </ul>
+      <section class="section section-band" aria-labelledby="featured-title">
+        <div class="section-heading">
+          <p class="eyebrow">Featured Work</p>
+          <h2 id="featured-title">A portfolio built from the CV, organized for the web.</h2>
+        </div>
+        <div class="feature-grid">
+          <a class="feature-card" href="research.html">
+            <span>Research</span>
+            <strong>Hydration, ion transport, nanoconfinement, and MOF adsorption.</strong>
+          </a>
+          <a class="feature-card" href="publications.html">
+            <span>Publications</span>
+            <strong>Paper cards with figures, authors, contribution marks, and expandable summaries.</strong>
+          </a>
+          <a class="feature-card" href="experience.html">
+            <span>Experience</span>
+            <strong>Current and prior projects in molecular simulation and free-energy methods.</strong>
+          </a>
+        </div>
       </section>
 
-      <section>
-        <h2>Conferences and Workshops</h2>
-        <ul class="timeline">
-          <li>Chemistry and Physics of Liquids, Gordon Research Conference. Poster: <em>Thermodynamics of alkali metal ion uptake from aqueous solution in MOF-808</em>. <span>Aug. 2025</span></li>
-          <li>Quantum-Mechanical, Data-driven, and Multi-scale Simulation of Complex System Workshop. Hands-on tutorial using MB-nrg, MBX, and LAMMPS. <span>Jul. 2025</span></li>
-          <li>American Chemical Society 2025 Meeting. Poster: <em>Accurate modeling of aqueous phase chemistry with rigorous physical principles</em>. <span>Mar. 2025</span></li>
-          <li>Joint March Meeting and April Meeting: Global Physics Summit 2025. Poster: <em>Accurate Computational Modeling of Aqueous Phase Chemistry Across Phases and Interfaces</em>. <span>Mar. 2025</span></li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Scholastic Achievements</h2>
-        <ul class="timeline">
-          <li>Merit for Academic Excellence in the M.S. in Chemistry, IIT Kanpur. <span>2022</span></li>
-          <li>All India Rank 80 in IIT-JAM (Chemistry). <span>2021</span></li>
-          <li>INSPIRE Fellowship, Government of India ($5,000). <span>2018 - 2023</span></li>
-          <li>JBNSTS Fellowship, Government of West Bengal ($700). <span>2016 - 2018</span></li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Certifications</h2>
-        <ul class="timeline">
-          <li>
-            Machine Learning Specialization (DeepLearning.AI and Stanford University, Coursera).
-            <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/YBSDS24X2ZR5" target="_blank" rel="noreferrer">Credential Link</a>
-            <span>May 2023 - Aug. 2023</span>
-          </li>
-          <li>
-            Quantum Mechanics of Molecular Structures (UTokyoX, edX).
-            <a href="https://courses.edx.org/certificates/4d7ca857870e452ca81c3a6a4fe1f445" target="_blank" rel="noreferrer">Credential Link</a>
-            <span>Jan. 2021 - Mar. 2021</span>
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Extracurricular Activities</h2>
-        <ul class="timeline">
-          <li>
-            Curator at Deepstash. Publishes summaries of self-help books.
-            <a href="https://deepstash.com/u/ssuman24" target="_blank" rel="noreferrer">Profile: ssuman24</a>
-            <span>Mar. 2021 - Ongoing</span>
-          </li>
-          <li>Social Work: taught underprivileged children for 12 weeks at St. Xavier's school (Kolkata). <span>Feb. 2019 - Apr. 2019</span></li>
-          <li>Core Committee Member, National Seminar on Recent Advances in Chemical and Biological Sciences. <span>Jan. 2020</span></li>
-          <li>Completed 4th Year in Fine Arts, First Division with distinction, Bangiya Sangeet Kala Kendra, Kolkata. <span>Jun. 2014</span></li>
-        </ul>
+      <section class="section" aria-labelledby="education-title">
+        <div class="section-heading">
+          <p class="eyebrow">Education</p>
+          <h2 id="education-title">Academic training.</h2>
+        </div>
+        <div class="education-grid">
+          <article class="card">
+            <p class="date">Expected 2028</p>
+            <h3>University of California San Diego</h3>
+            <p>Ph.D. in Chemistry with Prof. Francesco Paesani. GPA: 3.9/4.0.</p>
+          </article>
+          <article class="card">
+            <p class="date">Jul. 2021 - Mar. 2023</p>
+            <h3>Indian Institute of Technology Kanpur</h3>
+            <p>M.S. in Chemistry. CGPA: 9.8/10.0.</p>
+          </article>
+          <article class="card">
+            <p class="date">Jul. 2018 - Jun. 2021</p>
+            <h3>St. Xavier's College, Kolkata</h3>
+            <p>B.S. in Chemistry through Calcutta University. CGPA: 8.12/10.00.</p>
+          </article>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>Built from CV data in <code>main.tex</code> for GitHub Pages hosting.</p>
+    <footer class="footer">
+      <p>Last updated from public CV details: May 2, 2026.</p>
+      <p>The local CV PDF is intentionally not published with this site.</p>
     </footer>
   </body>
 </html>
