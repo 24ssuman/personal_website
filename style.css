@@ -600,6 +600,74 @@ h3 {
   max-width: 900px;
 }
 
+.conference-section {
+  background:
+    linear-gradient(135deg, rgba(20, 95, 104, 0.08), rgba(181, 83, 56, 0.08)),
+    var(--paper-strong);
+}
+
+.section-band > .conference-panel {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.conference-panel {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.34fr) minmax(0, 0.66fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.conference-heading {
+  position: sticky;
+  top: 88px;
+  margin-bottom: 0;
+}
+
+.conference-heading p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.conference-list {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.conference-list li {
+  position: relative;
+  padding: 1rem 1rem 1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--teal);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(43, 53, 48, 0.06);
+}
+
+.conference-list li:nth-child(2n) {
+  border-left-color: var(--rust);
+}
+
+.conference-list li:nth-child(3n) {
+  border-left-color: var(--violet);
+}
+
+.conference-list strong {
+  display: block;
+  margin: 0.18rem 0 0.2rem;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.25;
+}
+
+.conference-list p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .recognition-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -754,6 +822,20 @@ h3 {
     max-height: 250px;
     border-right: 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .conference-panel {
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+  }
+
+  .section-band > .conference-panel {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .conference-heading {
+    position: static;
   }
 
   .experience-item {
