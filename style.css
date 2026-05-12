@@ -142,10 +142,10 @@ h3 {
 
 .nav-links a {
   color: var(--muted);
-  padding: 0.35rem 0.42rem;
+  padding: 0.35rem 0.48rem;
   border-radius: 6px;
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
-  font-size: 0.81rem;
+  font-size: 0.82rem;
   font-weight: 600;
   text-decoration: none;
 }
@@ -474,13 +474,22 @@ h3 {
   content: "Hide details";
 }
 
-.paper-card summary strong {
+.paper-card summary > strong {
   display: block;
   max-width: 760px;
   color: var(--ink);
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
   font-size: 1.28rem;
   line-height: 1.18;
+}
+
+.summary-authors {
+  display: block;
+  max-width: 760px;
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.45;
 }
 
 .paper-meta {
@@ -493,12 +502,8 @@ h3 {
   text-transform: uppercase;
 }
 
-.authors {
-  margin: 1rem 0 0.55rem;
-  color: var(--ink);
-}
-
-.paper-card details > p:not(.authors) {
+.paper-card details > p {
+  margin-top: 0.95rem;
   color: var(--muted);
 }
 
