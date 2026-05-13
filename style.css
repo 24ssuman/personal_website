@@ -287,7 +287,6 @@ h3 {
 .metric,
 .card,
 .publication-list li,
-.experience-item,
 .timeline li,
 .feature-card,
 .paper-card {
@@ -321,6 +320,10 @@ h3 {
 
 .feature-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.feature-grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .feature-card {
@@ -525,29 +528,6 @@ h3 {
 .paper-link:hover {
   color: #fffaf0;
   background: var(--rust);
-}
-
-.experience-list {
-  display: grid;
-  gap: 0.85rem;
-}
-
-.experience-item {
-  display: grid;
-  grid-template-columns: minmax(240px, 0.42fr) minmax(0, 0.58fr);
-  gap: 1.2rem;
-  padding: 1.1rem;
-}
-
-.experience-item h2 {
-  margin-bottom: 0;
-  font-size: 1.14rem;
-  line-height: 1.25;
-}
-
-.experience-item p:last-child {
-  margin-bottom: 0;
-  color: var(--muted);
 }
 
 .skill-grid {
@@ -836,11 +816,6 @@ h3 {
 
   .conference-heading {
     position: static;
-  }
-
-  .experience-item {
-    grid-template-columns: 1fr;
-    gap: 0.35rem;
   }
 
   .footer {
