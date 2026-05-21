@@ -842,16 +842,22 @@ h3 {
     margin-bottom: 0.65rem;
   }
 
-  .paper-card {
+  .paper-card,
+  .project-card {
     grid-template-columns: 1fr;
   }
 
-  .paper-card img {
+  .paper-card img,
+  .project-image {
     min-height: 190px;
     max-height: 250px;
     border: 1px solid var(--line);
     width: calc(100% - 2rem);
     margin: 1rem auto;
+  }
+
+  .project-info {
+    padding: 1.2rem;
   }
 
   .conference-panel {
@@ -957,17 +963,33 @@ h3 {
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
 .project-card {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 1.5rem;
   box-shadow: 0 8px 24px rgba(43, 53, 48, 0.06);
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  align-self: stretch;
+  object-fit: cover;
+  background: var(--paper-strong);
+  border: none;
+  border-right: 1px solid var(--line);
+  border-radius: 8px 0 0 8px;
+}
+
+.project-info {
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 240px;
 }
 
 .project-tag {
