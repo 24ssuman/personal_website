@@ -461,10 +461,10 @@ h3 {
 }
 
 .paper-card img {
-  width: calc(100% - 1.5rem);
-  max-width: 300px;
+  width: calc(100% - 2rem);
+  max-width: 280px;
   height: auto;
-  margin: 0.75rem;
+  margin: 1rem;
   align-self: center;
   object-fit: contain;
   background: var(--paper-strong);
@@ -828,8 +828,8 @@ h3 {
     min-height: 190px;
     max-height: 250px;
     border: 1px solid var(--line);
-    width: calc(100% - 1.5rem);
-    margin: 0.75rem auto;
+    width: calc(100% - 2rem);
+    margin: 1rem auto;
   }
 
   .conference-panel {
