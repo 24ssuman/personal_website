@@ -1196,6 +1196,24 @@ h3 {
   margin-top: 0.4rem;
 }
 
+@media (max-width: 720px) {
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-image {
+    min-height: 190px;
+    max-height: 250px;
+    width: calc(100% - 2rem);
+    margin: 1rem auto;
+    object-fit: contain;
+  }
 
+  .project-info {
+    padding: 1.2rem;
+  }
 
-
+  .project-links {
+    flex-wrap: wrap;
+  }
+}
