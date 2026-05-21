@@ -1147,4 +1147,33 @@ h3 {
   background: rgba(43, 53, 48, 0.1);
 }
 
+.project-details {
+  margin-top: 0.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.project-details-btn {
+  cursor: pointer;
+  list-style: none;
+  display: inline-block;
+  padding: 0.36rem 0.65rem;
+  color: var(--teal-dark);
+  background: rgba(20, 95, 104, 0.09);
+  border-radius: 6px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-details-btn::-webkit-details-marker {
+  display: none;
+}
+
+.project-details[open] .project-details-btn {
+  background: var(--teal);
+  color: #ffffff;
+}
+
+
 
