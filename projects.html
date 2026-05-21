@@ -12,11 +12,11 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suman Saha | GitHub & Open-Source Projects</title>
+    <title>Suman Saha | GitHub Projects</title>
     <meta name="author" content="Suman Saha" />
     <meta
       name="description"
-      content="Open-source repositories, tutorials, and computational chemistry tools developed by Suman Saha."
+      content="GitHub projects, interactive notebooks, and computational chemistry tutorials developed by Suman Saha."
     />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,7 +36,7 @@
           <a href="index.html">Home</a>
           <a href="research.html">Research</a>
           <a href="publications.html">Publications</a>
-          <a aria-current="page" href="projects.html">Projects</a>
+          <a class="nav-active" aria-current="page" href="projects.html">GitHub Projects</a>
           <a href="teaching.html">Teaching</a>
         </div>
       </nav>
@@ -44,60 +44,33 @@
 
     <main id="main">
       <section class="page-hero">
-        <p class="eyebrow">GitHub & Open Source</p>
-        <h1>Code repositories, interactive guides, and research software tools.</h1>
+        <p class="eyebrow">GitHub Projects</p>
+        <h1>Interactive tutorials, scientific coding, and open-source resources.</h1>
         <p>
-          A selection of tutorials, data analysis pipelines, and utility scripts 
-          developed to support research and scientific documentation.
+          A selection of educational coding materials and tutorials designed to introduce 
+          students and researchers to computational methods.
         </p>
       </section>
 
       <section class="section" aria-label="GitHub projects list">
         <div class="projects-grid">
           
-          <article class="project-card reveal-item">
+          <article class="project-card reveal-item" style="max-width: 680px; margin: 0 auto; width: 100%;">
             <div>
-              <span class="project-tag">Interactive Tutorial</span>
-              <h3>Markdown Interactive Tutorial</h3>
+              <span class="project-tag">Interactive Jupyter Book</span>
+              <h3>Molecular Dynamics Tutorial for Beginners</h3>
               <p>
-                An interactive, comprehensive step-by-step guide designed to teach 
-                Markdown syntax for scientific writing, repository documentation, 
-                and technical blogs.
+                A comprehensive, step-by-step interactive Jupyter Book developed to guide students and researchers through the foundations of classical molecular simulations.
               </p>
+              <ul style="color: var(--muted); font-size: 0.96rem; margin: 0 0 1.5rem 1.2rem; padding: 0; line-height: 1.5;">
+                <li style="margin-bottom: 0.4rem;"><strong>Module-Based Learning:</strong> Starts with basic physical formulations (Verlet integration, equations of motion) and scales to multi-atom structures.</li>
+                <li style="margin-bottom: 0.4rem;"><strong>Hands-On Coding:</strong> Contains structured Python notebooks where students write toy molecular dynamics codes from scratch.</li>
+                <li style="margin-bottom: 0.4rem;"><strong>Interactive Elements:</strong> Incorporates math formatting (MathJax), parameter controls, and live visual output.</li>
+              </ul>
             </div>
             <div class="project-links">
-              <a class="project-link" href="https://24ssuman.github.io/md-tutorial/intro.html" target="_blank" rel="noreferrer">Interactive Page</a>
+              <a class="project-link" href="https://24ssuman.github.io/md-tutorial/intro.html" target="_blank" rel="noreferrer">Interactive Tutorial Page</a>
               <a class="project-repo" href="https://github.com/24ssuman/md-tutorial" target="_blank" rel="noreferrer">GitHub Repo</a>
-            </div>
-          </article>
-
-          <article class="project-card reveal-item">
-            <div>
-              <span class="project-tag">Alchemical Workflows</span>
-              <h3>MB-nrg Free Energy Setup</h3>
-              <p>
-                Automation scripts and input file templates for configuring staged 
-                alchemical free-energy perturbation calculations in MB-nrg and 
-                MB-pol molecular dynamics systems.
-              </p>
-            </div>
-            <div class="project-links">
-              <a class="project-repo" href="https://github.com/24ssuman" target="_blank" rel="noreferrer">GitHub Repo</a>
-            </div>
-          </article>
-
-          <article class="project-card reveal-item">
-            <div>
-              <span class="project-tag">Data Analysis</span>
-              <h3>Molecular Trajectory Tools</h3>
-              <p>
-                Python utility scripts leveraging MDAnalysis and NumPy to calculate 
-                coordination shells, topological hydrogen-bond networks, and radial 
-                density profiles under confinement.
-              </p>
-            </div>
-            <div class="project-links">
-              <a class="project-repo" href="https://github.com/24ssuman" target="_blank" rel="noreferrer">GitHub Repo</a>
             </div>
           </article>
 
