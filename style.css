@@ -865,11 +865,11 @@ h3 {
 }
 
 /* Dynamic Interactive Transitions for Cards */
-.feature-card, .paper-card, .metric, .card, .conference-list li, .timeline li {
+.feature-card, .paper-card, .metric, .card, .conference-list li, .timeline li, .project-card {
   transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 
-.feature-card:hover, .paper-card:hover, .conference-list li:hover {
+.feature-card:hover, .paper-card:hover, .conference-list li:hover, .project-card:hover {
   transform: translateY(-4px);
   border-color: var(--teal);
   box-shadow: 0 14px 32px var(--teal-glow);
@@ -925,4 +925,95 @@ h3 {
   background-color: var(--rust);
   color: #ffffff;
 }
+
+/* --- Projects Page Grid & Cards --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(43, 53, 48, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 240px;
+}
+
+.project-tag {
+  display: inline-block;
+  align-self: start;
+  color: var(--rust);
+  background: rgba(205, 92, 92, 0.08);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.project-card h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.35rem;
+  color: var(--ink);
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
+}
+
+.project-card p {
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.45;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link,
+.project-repo {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.project-link {
+  color: #ffffff;
+  background: var(--teal);
+}
+
+.project-link:hover {
+  background: var(--teal-dark);
+}
+
+.project-repo {
+  color: var(--ink);
+  background: rgba(43, 53, 48, 0.06);
+  border: 1px solid var(--line);
+}
+
+.project-repo:hover {
+  background: rgba(43, 53, 48, 0.1);
+}
+
 
