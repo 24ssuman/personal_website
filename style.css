@@ -1147,33 +1147,51 @@ h3 {
   background: rgba(43, 53, 48, 0.1);
 }
 
-.project-details {
-  margin-top: 0.2rem;
-  margin-bottom: 1.2rem;
+.project-accordion {
+  margin-top: auto;
 }
 
-.project-details-btn {
+.project-accordion-summary {
   cursor: pointer;
   list-style: none;
-  display: inline-block;
-  padding: 0.36rem 0.65rem;
-  color: var(--teal-dark);
-  background: rgba(20, 95, 104, 0.09);
-  border-radius: 6px;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  outline: none;
 }
 
-.project-details-btn::-webkit-details-marker {
+.project-accordion-summary::-webkit-details-marker {
   display: none;
 }
 
-.project-details[open] .project-details-btn {
-  background: var(--teal);
-  color: #ffffff;
+.project-details-btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  color: var(--teal-dark);
+  background: rgba(20, 95, 104, 0.09);
+  border: 1px solid rgba(20, 95, 104, 0.15);
+  transition: all 0.2s ease;
+  user-select: none;
 }
+
+.project-details-btn:hover {
+  background: rgba(20, 95, 104, 0.18);
+  color: var(--teal-dark);
+}
+
+.project-accordion[open] .project-details-btn {
+  background: var(--rust);
+  color: #ffffff;
+  border-color: var(--rust);
+}
+
+.project-details-content {
+  margin-top: 0.4rem;
+}
+
 
 
 
