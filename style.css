@@ -73,7 +73,7 @@ h1 {
   max-width: 760px;
   margin-bottom: 1rem;
   color: #fffaf0;
-  font-size: 4.1rem;
+  font-size: 3.8rem;
   line-height: 0.98;
 }
 
@@ -156,13 +156,8 @@ h3 {
 }
 
 .nav-links a:hover,
-.nav-links a[aria-current="page"] {
-  color: var(--ink);
-  background: rgba(20, 95, 104, 0.08);
-}
-
-.nav-links a:hover,
-.nav-links a[aria-current="page"] {
+.nav-links a[aria-current="page"],
+.nav-links a.nav-active {
   color: var(--ink);
   background: rgba(20, 95, 104, 0.08);
 }
@@ -183,8 +178,7 @@ h3 {
 }
 
 .hero-inner,
-.section,
-.footer {
+.section {
   max-width: 1040px;
   margin: 0 auto;
 }
@@ -267,21 +261,82 @@ h3 {
 }
 
 .page-hero {
+  position: relative;
+  min-height: 300px;
+  padding: 4rem 1.5rem 3rem;
+  background:
+    linear-gradient(90deg, rgba(13, 20, 19, 0.82) 0%, rgba(13, 20, 19, 0.62) 38%, rgba(13, 20, 19, 0.18) 72%),
+    var(--paper-strong) center / cover no-repeat;
+  border-bottom: 1px solid rgba(13, 20, 19, 0.14);
+  overflow: hidden;
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 2;
   max-width: 1040px;
   margin: 0 auto;
-  padding: 3.2rem 1.5rem 1.6rem;
+  padding: 0 1.5rem;
+}
+
+.page-hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+/* Per-page background images */
+.page-hero-research {
+  background-image:
+    linear-gradient(90deg, rgba(13, 20, 19, 0.82) 0%, rgba(13, 20, 19, 0.62) 38%, rgba(13, 20, 19, 0.18) 72%),
+    url("assets/banner-research.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.page-hero-publications {
+  background-image:
+    linear-gradient(90deg, rgba(13, 20, 19, 0.82) 0%, rgba(13, 20, 19, 0.62) 38%, rgba(13, 20, 19, 0.18) 72%),
+    url("assets/banner-publications.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.page-hero-projects {
+  background-image:
+    linear-gradient(90deg, rgba(13, 20, 19, 0.82) 0%, rgba(13, 20, 19, 0.62) 38%, rgba(13, 20, 19, 0.18) 72%),
+    url("assets/banner-projects.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.page-hero-teaching {
+  background-image:
+    linear-gradient(90deg, rgba(13, 20, 19, 0.82) 0%, rgba(13, 20, 19, 0.62) 38%, rgba(13, 20, 19, 0.18) 72%),
+    url("assets/banner-teaching.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.page-hero .eyebrow {
+  color: #f0b492;
 }
 
 .page-hero h1 {
   max-width: 860px;
-  color: var(--ink);
+  color: #fffaf0;
   font-size: 2.85rem;
   line-height: 1.08;
 }
 
 .page-hero p:not(.eyebrow) {
   max-width: 760px;
-  color: var(--muted);
+  color: #f0ece4;
   font-size: 1.15rem;
 }
 
@@ -309,7 +364,7 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(43, 53, 48, 0.06);
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
 .feature-card:hover,
@@ -350,10 +405,28 @@ h3 {
 
 .feature-card {
   display: block;
+  position: relative;
   min-height: 168px;
   padding: 1.2rem;
+  padding-bottom: 2.5rem;
   color: var(--ink);
   text-decoration: none;
+  overflow: hidden;
+}
+
+.feature-card::after {
+  content: "\2192";
+  position: absolute;
+  bottom: 1rem;
+  right: 1.2rem;
+  font-size: 1.15rem;
+  color: var(--teal);
+  transition: transform 0.25s ease, color 0.25s;
+}
+
+.feature-card:hover::after {
+  transform: translateX(4px);
+  color: var(--rust);
 }
 
 .feature-card span {
@@ -396,7 +469,7 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(43, 53, 48, 0.06);
-  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.3s ease;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
 }
 
 .research-card:hover {
@@ -415,7 +488,7 @@ h3 {
   background: var(--paper-strong);
   border: 1px solid var(--line);
   border-radius: 6px;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .research-card:hover .research-card-image {
@@ -461,6 +534,11 @@ h3 {
 
 .related-pubs-btn::-webkit-details-marker {
   display: none;
+}
+
+.related-pubs-btn::marker {
+  display: none;
+  content: "";
 }
 
 .related-pubs[open] .related-pubs-btn {
@@ -598,10 +676,12 @@ h3 {
   padding: 0.32rem 0.55rem;
   color: var(--teal-dark);
   background: rgba(20, 95, 104, 0.09);
+  border: 1px solid rgba(20, 95, 104, 0.22);
   border-radius: 6px;
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .paper-card details[open] summary::after {
@@ -661,6 +741,15 @@ h3 {
   color: #fffaf0;
   background: var(--rust);
   transform: translateY(-2px);
+}
+
+.paper-link:focus-visible,
+.project-link:focus-visible,
+.project-repo:focus-visible,
+.related-pubs-btn:focus-visible,
+.project-details-btn:focus-visible {
+  outline: 3px solid rgba(20, 95, 104, 0.5);
+  outline-offset: 3px;
 }
 
 .skill-grid {
@@ -782,7 +871,7 @@ h3 {
 }
 
 .recognition-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .plain-list {
@@ -808,18 +897,26 @@ h3 {
 }
 
 .footer {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 0.75rem;
-  padding: 2rem 1.5rem;
+  padding: 2rem max(1.5rem, calc((100% - 1040px) / 2 + 1.5rem));
   color: var(--muted);
-  border-top: 1px solid var(--line);
+  border-top: 3px solid var(--teal);
   font-size: 0.95rem;
+  background: var(--paper-strong);
+  box-sizing: border-box;
 }
 
 .footer p {
   margin-bottom: 0;
+}
+
+.footer a {
+  color: var(--teal-dark);
+  font-weight: 600;
 }
 
 @media (max-width: 980px) {
@@ -981,7 +1078,7 @@ h3 {
 
 /* Dynamic Interactive Transitions for Cards */
 .feature-card, .paper-card, .metric, .card, .conference-list li, .timeline li, .project-card {
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease, transform 0.12s ease, background-color 0.12s ease;
 }
 
 .feature-card:hover, .paper-card:hover, .conference-list li:hover, .project-card:hover {

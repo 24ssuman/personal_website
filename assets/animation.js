@@ -5,11 +5,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // --- 1. Interactive Molecular Canvas Background ---
-  const hero = document.querySelector(".hero-home");
-  if (hero) {
-    // Create canvas element
+  // Runs on both the home hero (.hero-home) and inner page banners (.page-hero)
+  function attachMolecularCanvas(hero) {
     const canvas = document.createElement("canvas");
-    canvas.className = "molecular-canvas";
+    canvas.className = "molecular-canvas page-hero-canvas";
     hero.insertBefore(canvas, hero.firstChild);
 
     const ctx = canvas.getContext("2d");
@@ -25,8 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function resizeCanvas() {
       canvas.width = hero.clientWidth;
       canvas.height = hero.clientHeight;
-      
-      // Adjust particle density based on screen size
       if (canvas.width < 768) {
         particleCount = 20;
       } else {
@@ -48,38 +45,24 @@ document.addEventListener("DOMContentLoaded", () => {
       reset() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        // Molecular motion is thermal and slow
         this.vx = (Math.random() - 0.5) * 0.45;
         this.vy = (Math.random() - 0.5) * 0.45;
-        
-        // Define atom type: 'O' (Oxygen, larger) or 'H' (Hydrogen, smaller)
-        // 1:2 ratio mimicking water clusters
         this.type = Math.random() > 0.33 ? "H" : "O";
         this.radius = this.type === "O" ? Math.random() * 3.5 + 3.5 : Math.random() * 2 + 1.5;
       }
 
       update() {
-        // Wrap around boundaries
-        if (this.x < 0 || this.x > canvas.width) {
-          this.vx = -this.vx;
-        }
-        if (this.y < 0 || this.y > canvas.height) {
-          this.vy = -this.vy;
-        }
-
-        // Apply motion
+        if (this.x < 0 || this.x > canvas.width)  this.vx = -this.vx;
+        if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
         this.x += this.vx;
         this.y += this.vy;
 
-        // Interaction with mouse cursor (repulsion)
         if (mouse.x !== null && mouse.y !== null) {
           const dx = this.x - mouse.x;
           const dy = this.y - mouse.y;
           const dist = Math.hypot(dx, dy);
-
           if (dist < mouse.radius) {
             const force = (mouse.radius - dist) / mouse.radius;
-            // Smoothly push particles away
             this.x += (dx / dist) * force * 1.5;
             this.y += (dy / dist) * force * 1.5;
           }
@@ -91,8 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fillStyle = this.type === "O" ? particleColor : hydrogenColor;
         ctx.fill();
-
-        // Add a micro glow effect to oxygen (representing hydration shell/polarizability)
         if (this.type === "O") {
           ctx.beginPath();
           ctx.arc(this.x, this.y, this.radius * 2, 0, Math.PI * 2);
@@ -102,7 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Initialize particles
     function initParticles() {
       particles.length = 0;
       for (let i = 0; i < particleCount; i++) {
@@ -110,18 +90,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Draw bonds (molecular graph edges)
     function drawBonds() {
       for (let i = 0; i < particles.length; i++) {
         const p1 = particles[i];
-
-        // Check distance to other particles
         for (let j = i + 1; j < particles.length; j++) {
           const p2 = particles[j];
-          const dx = p1.x - p2.x;
-          const dy = p1.y - p2.y;
-          const dist = Math.hypot(dx, dy);
-
+          const dist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
           if (dist < connectionDistance) {
             const opacity = (1 - dist / connectionDistance) * 0.7;
             ctx.beginPath();
@@ -132,13 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
             ctx.stroke();
           }
         }
-
-        // Draw dynamic chemical bonds to cursor
         if (mouse.x !== null && mouse.y !== null) {
-          const dx = p1.x - mouse.x;
-          const dy = p1.y - mouse.y;
-          const dist = Math.hypot(dx, dy);
-
+          const dist = Math.hypot(p1.x - mouse.x, p1.y - mouse.y);
           if (dist < mouse.radius) {
             const opacity = (1 - dist / mouse.radius) * 0.25;
             ctx.beginPath();
@@ -152,41 +121,37 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Main animation loop
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       for (let i = 0; i < particles.length; i++) {
         particles[i].update();
         particles[i].draw();
       }
-
       drawBonds();
       animationFrameId = requestAnimationFrame(animate);
     }
 
-    // Setup events
-    window.addEventListener("resize", () => {
-      resizeCanvas();
-      initParticles();
-    });
-
+    window.addEventListener("resize", () => { resizeCanvas(); initParticles(); });
     hero.addEventListener("mousemove", (e) => {
       const rect = hero.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
       mouse.y = e.clientY - rect.top;
     });
+    hero.addEventListener("mouseleave", () => { mouse.x = null; mouse.y = null; });
 
-    hero.addEventListener("mouseleave", () => {
-      mouse.x = null;
-      mouse.y = null;
-    });
-
-    // Start canvas execution
     resizeCanvas();
     initParticles();
     animate();
   }
+
+  // Attach to home hero
+  const homeHero = document.querySelector(".hero-home");
+  if (homeHero) attachMolecularCanvas(homeHero);
+
+  // Attach to all inner page banners
+  const pageHero = document.querySelector(".page-hero");
+  if (pageHero) attachMolecularCanvas(pageHero);
+
 
   // --- 2. Viewport Scroll Reveal ---
   const revealElements = document.querySelectorAll(".reveal-item");
