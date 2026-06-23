@@ -315,10 +315,10 @@ h3 {
   background-position: center;
 }
 
-.page-hero-teaching {
+.page-hero-beyond-the-lab {
   background-image:
     linear-gradient(90deg, rgba(13, 20, 19, 0.82) 0%, rgba(13, 20, 19, 0.62) 38%, rgba(13, 20, 19, 0.18) 72%),
-    url("assets/banner-teaching.png");
+    url("assets/banner-beyond-the-lab.png");
   background-size: cover;
   background-position: center;
 }
