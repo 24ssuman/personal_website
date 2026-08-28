@@ -237,3 +237,50 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+/* Continuous homepage navigation: keep the visible section highlighted. */
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = Array.from(document.querySelectorAll("[data-scroll-section]"));
+  const links = Array.from(document.querySelectorAll(".nav-links a[data-scroll-link]"));
+  if (!sections.length || !links.length) return;
+
+  const linkById = new Map(
+    links.map((link) => [link.getAttribute("href").replace(/^#/, ""), link])
+  );
+
+  function setActive(id) {
+    links.forEach((link) => {
+      if (link === linkById.get(id)) {
+        link.setAttribute("aria-current", "location");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  }
+
+  function updateActiveSection() {
+    const marker = 140;
+    let currentId = sections[0].id;
+
+    sections.forEach((section) => {
+      if (section.getBoundingClientRect().top <= marker) currentId = section.id;
+    });
+
+    setActive(currentId);
+  }
+
+  let ticking = false;
+  const handleScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(() => {
+      updateActiveSection();
+      ticking = false;
+    });
+  };
+
+  updateActiveSection();
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  window.addEventListener("resize", handleScroll, { passive: true });
+  window.addEventListener("hashchange", updateActiveSection);
+});

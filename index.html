@@ -31,24 +31,24 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=20260828" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <nav class="nav" aria-label="Primary navigation">
-        <a class="brand" href="index.html">Suman Saha</a>
+        <a class="brand" href="#home">Suman Saha</a>
         <div class="nav-links">
-          <a aria-current="page" href="index.html">Home</a>
-          <a href="research.html">Research</a>
-          <a href="publications.html">Publications</a>
-          <a href="projects.html">GitHub Projects</a>
-          <a href="beyond-the-lab.html">Beyond the Lab</a>
+          <a aria-current="location" data-scroll-link href="#home">Home</a>
+          <a data-scroll-link href="#research">Research</a>
+          <a data-scroll-link href="#publications">Publications</a>
+          <a data-scroll-link href="#projects">GitHub Projects</a>
+          <a data-scroll-link href="#beyond-the-lab">Beyond the Lab</a>
         </div>
       </nav>
     </header>
 
-    <section class="hero hero-home" aria-labelledby="hero-title">
+    <section class="hero hero-home" id="home" data-scroll-section="home" aria-labelledby="hero-title">
       <div class="hero-grid">
         <div class="hero-inner">
           <p class="eyebrow">Ph.D. Candidate in Chemistry &middot; UC San Diego</p>
@@ -59,19 +59,22 @@
             materials using data-driven many-body potentials and molecular simulation.
           </p>
           <div class="hero-actions" aria-label="Contact and profile links">
-            <a class="hero-cta" href="research.html">Explore my research</a>
+            <a class="hero-cta" href="#research">Explore my research</a>
             <a href="mailto:s7saha@ucsd.edu">Email</a>
             <a href="https://linkedin.com/in/saha-suman" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://scholar.google.com/citations?user=bfwWShIAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
             <a href="https://orcid.org/0009-0000-3877-6961" target="_blank" rel="noreferrer">ORCID</a>
           </div>
+          <a class="scroll-cue" href="#research">
+            <span>Scroll to explore the full site</span>
+            <span aria-hidden="true">↓</span>
+          </a>
         </div>
         <figure class="hero-portrait">
           <div class="portrait-ring">
             <img src="assets/suman-portrait-circle.jpg" width="760" height="760"
                  alt="Portrait of Suman Saha" />
           </div>
-          <figcaption>Suman Saha &middot; Paesani Research Group</figcaption>
         </figure>
       </div>
     </section>
@@ -104,20 +107,25 @@
       <section class="section section-band" aria-labelledby="featured-title">
         <div class="section-heading">
           <p class="eyebrow">Featured Work</p>
-          <h2 id="featured-title">Research, publications, and teaching highlights.</h2>
+          <h2 id="featured-title">A continuous path through my work.</h2>
+          <p class="section-note">Scroll naturally through every part of the site, or jump to a section below.</p>
         </div>
-        <div class="feature-grid">
-          <a class="feature-card reveal-item" href="research.html">
+        <div class="feature-grid home-feature-grid">
+          <a class="feature-card reveal-item" href="#research">
             <span>Research</span>
             <strong>Hydration, ion transport, nanoconfinement, and MOF adsorption.</strong>
           </a>
-          <a class="feature-card reveal-item" href="publications.html">
+          <a class="feature-card reveal-item" href="#publications">
             <span>Publications</span>
             <strong>Peer-reviewed papers with figures, authors, contribution marks, and links.</strong>
           </a>
-          <a class="feature-card reveal-item" href="projects.html">
+          <a class="feature-card reveal-item" href="#projects">
             <span>GitHub Projects</span>
             <strong>Interactive tutorials, code repositories, and educational resources.</strong>
+          </a>
+          <a class="feature-card reveal-item" href="#beyond-the-lab">
+            <span>Beyond the Lab</span>
+            <strong>Teaching, talks, awards, and community-facing work.</strong>
           </a>
         </div>
       </section>
@@ -145,6 +153,404 @@
           </article>
         </div>
       </section>
+
+      <section class="section section-scroll section-band" id="research" data-scroll-section="research" aria-labelledby="research-title">
+        <div class="scroll-section-inner">
+          <div class="section-heading scroll-section-heading">
+            <p class="eyebrow">Research</p>
+            <h2 id="research-title">Water chemistry across phases, pores, and interfaces.</h2>
+            <p>
+              My projects use molecular dynamics, free-energy methods, and
+              data-driven many-body potentials to connect molecular structure with
+              thermodynamics, transport, and reactivity.
+            </p>
+            <a class="section-link" href="research.html">View the full research page <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <div class="research-section">
+            <article class="research-card reveal-item">
+              <img src="assets/research_hydration.png" alt="Hydration free energies of ions in water" class="research-card-image" />
+              <div class="research-card-body">
+                <p class="card-kicker">Hydration</p>
+                <h3>Free energies of ions in water</h3>
+                <p>
+                  Staged alchemical free-energy calculations for alkali metal and
+                  halide ions using MB-pol water, MB-nrg ion potentials, and
+                  many-body electrostatics.
+                </p>
+                <details class="related-pubs">
+                  <summary class="related-pubs-btn">Related Publications</summary>
+                  <ul class="related-pubs-list">
+                    <li>
+                      <a href="https://doi.org/10.1021/acs.jctc.6c00391" target="_blank" rel="noreferrer">Hydration Free Energies of Alkali Metal and Halide Ions from Data-Driven Many-Body Potentials</a>
+                      <span class="related-pub-meta">J. Chem. Theory Comput. | 2026</span>
+                    </li>
+                    <li>
+                      <a href="https://doi.org/10.1021/acs.jctc.4c01005" target="_blank" rel="noreferrer">Current Status of the MB-pol Data-Driven Many-Body Potential for Predictive Simulations of Water Across Different Phases</a>
+                      <span class="related-pub-meta">J. Chem. Theory Comput. | 2024</span>
+                    </li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+
+            <article class="research-card reveal-item">
+              <img src="assets/research_confinement.png" alt="Nanoconfined water autoionization and interfacial reactivity" class="research-card-image" />
+              <div class="research-card-body">
+                <p class="card-kicker">Interfaces</p>
+                <h3>Nanoconfined water reactivity</h3>
+                <p>
+                  Simulations of how sub-nanometer confinement, interfacial
+                  chemistry, and framework flexibility modulate acid-base equilibria
+                  and proton-transfer pathways.
+                </p>
+                <details class="related-pubs">
+                  <summary class="related-pubs-btn">Related Publications</summary>
+                  <ul class="related-pubs-list">
+                    <li>
+                      <a href="https://doi.org/10.1021/acsnano.5c17458" target="_blank" rel="noreferrer">Carbon Polarization and Carbon Nanotube Stacking Impacts the Behavior of Water in Nanoconfinement</a>
+                      <span class="related-pub-meta">ACS Nano | 2026</span>
+                    </li>
+                    <li>
+                      <a href="https://doi.org/10.1021/acs.jpclett.5c02963" target="_blank" rel="noreferrer">Reactivity of Nanoconfined Water Is Modulated by the Properties of Confining Materials</a>
+                      <span class="related-pub-meta">J. Phys. Chem. Lett. | 2025</span>
+                    </li>
+                    <li>
+                      <a href="https://doi.org/10.1021/jacs.5c08273" target="_blank" rel="noreferrer">Sub-nanometer Confinement Suppresses Autoionization of Water</a>
+                      <span class="related-pub-meta">J. Am. Chem. Soc. | 2025</span>
+                    </li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+
+            <article class="research-card reveal-item">
+              <img src="assets/research_uptake.png" alt="Ion adsorption in metal-organic framework MOF-808" class="research-card-image" />
+              <div class="research-card-body">
+                <p class="card-kicker">Materials</p>
+                <h3>Ion uptake in MOF-808</h3>
+                <p>
+                  Enhanced sampling and thermodynamic modeling of alkali metal ion
+                  adsorption from aqueous solution into metal-organic frameworks.
+                </p>
+                <details class="related-pubs">
+                  <summary class="related-pubs-btn">Related Publications</summary>
+                  <ul class="related-pubs-list">
+                    <li>
+                      <a href="https://doi.org/10.1039/D5SC01596K" target="_blank" rel="noreferrer">Thermodynamics of Alkali Metal Ion Uptake from Aqueous Solution in MOF-808</a>
+                      <span class="related-pub-meta">Chem. Sci. | 2025</span>
+                    </li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-scroll" id="publications" data-scroll-section="publications" aria-labelledby="publications-title">
+        <div class="scroll-section-inner">
+          <div class="section-heading scroll-section-heading">
+            <p class="eyebrow">Publications</p>
+            <h2 id="publications-title">Peer-reviewed publications and accepted manuscripts.</h2>
+            <p>
+              Molecular simulation, aqueous chemistry, nanoconfinement, and porous
+              materials. Open a publication to read its abstract and follow the DOI link.
+            </p>
+            <p class="section-note">* corresponding author; † equal contribution.</p>
+            <a class="section-link" href="publications.html">View the full publications page <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <div class="publication-section">
+            <article class="paper-card reveal-item">
+              <img src="assets/publications/betalactam-computations.png?v=3" alt="Visual summary for beta-lactam computational paper" />
+              <details>
+                <summary>
+                  <span class="paper-meta">ChemPhysChem | 2026</span>
+                  <strong>Steric Induced Inhibition of Serine β-Lactamase Catalyzed Hydrolysis</strong>
+                  <span class="summary-authors">Vaishali Thakkur, Chandan Kumar Das, Shivani Verma, <strong>Suman Saha</strong>, Nisanth N. Nair*</span>
+                </summary>
+                <p>
+                  Serine β-lactamases are bacterial enzymes that cause antibiotic resistance by rapid hydrolysis of β-lactam antibiotics. Development of efficient covalent inhibitors for serine β-lactamases requires an understanding of the factors that can increase the free energy barrier for hydrolysis of the covalent-intermediate formed by the β-lactamases and the ligands. We show that steric factors introduced by methyl substitution at a suitable position in an existing β-lactam drug can slow down its hydrolysis by sterically hindering the hydrolytic water molecule from approaching the reaction site. Through molecular simulations, we demonstrate that a weak cephalosporin, like cephalothin, can be revitalized with this strategy. An increase in the lifetime of the acyl–enzyme complex leads to the inhibition of serine β-lactamases.
+                </p>
+                <div class="paper-links">
+                  <a class="paper-link" href="https://doi.org/10.1002/cphc.70414" target="_blank" rel="noreferrer">Read paper</a>
+                  <a class="paper-link reprint-link" href="https://www.biorxiv.org/content/10.1101/2024.01.14.575563v1-0.full" target="_blank" rel="noreferrer">bioRxiv preprint</a>
+                </div>
+              </details>
+            </article>
+
+            <article class="paper-card reveal-item">
+              <img src="assets/publications/hydration-free-energies.png?v=2" alt="Visual summary for hydration free energies paper" />
+              <details>
+                <summary>
+                  <span class="paper-meta">J. Chem. Theory Comput. | 2026</span>
+                  <strong>Hydration Free Energies of Alkali Metal and Halide Ions from Data-Driven Many-Body Potentials</strong>
+                  <span class="summary-authors"><strong>Suman Saha*</strong>, Francesco Paesani*</span>
+                </summary>
+                <p>
+                  Single-ion hydration free energies stringently test molecular models for aqueous ions, but quantitative comparison is complicated by the interplay of short-range ion–water interactions, long-range electrostatics, many-body polarization, and nuclear quantum effects (NQE). Here, we compute hydration free energies for alkali-metal cations (Li<sup>+</sup>–Cs<sup>+</sup>) and halide anions (F<sup>−</sup>–I<sup>−</sup>) using MB-nrg ion potentials in MB-pol water. Free energies are evaluated with a staged alchemical cycle in which ion–water interactions are introduced sequentially (charge, polarization, and explicit 2-body and 3-body terms), enabling stable sampling of each contribution. Across both ion families, MB-nrg/MB-pol reproduces the expected monotonic weakening of hydration with increasing ionic size and yields close agreement with experiment. Ion–water radial distribution functions show that electrostatics rapidly establishes the first hydration shell, while the explicit many-body corrections relax short-range overstructuring toward the fully interacting reference distribution.
+                </p>
+                <div class="paper-links">
+                  <a class="paper-link" href="https://doi.org/10.1021/acs.jctc.6c00391" target="_blank" rel="noreferrer">Read paper</a>
+                  <a class="paper-link reprint-link" href="https://doi.org/10.26434/chemrxiv.15000607/v2" target="_blank" rel="noreferrer">ChemRxiv preprint</a>
+                </div>
+              </details>
+            </article>
+
+            <article class="paper-card reveal-item">
+              <img src="assets/publications/nanotube-water.png?v=2" alt="Visual summary for nanoconfined water in carbon nanotubes paper" />
+              <details>
+                <summary>
+                  <span class="paper-meta">ACS Nano | 2026</span>
+                  <strong>Carbon Polarization and Carbon Nanotube Stacking Impacts the Behavior of Water in Nanoconfinement</strong>
+                  <span class="summary-authors">Leonard Dick, Richa Rashmi, Henry Agnew, <strong>Suman Saha</strong>, Xuanyu Zhu, Barbara Kirchner*, Francesco Paesani*</span>
+                </summary>
+                <p>
+                  The structural and dynamical properties of water confined in subnanometer, single-walled carbon nanotubes (CNTs) are investigated using molecular dynamics simulations. With radii ranging from 4 to 8 Å, we assess confinement-size effects using fully flexible CNTs with explicit carbon polarizability and the MB-pol water model. Density distributions reveal that single-file water chains form in the narrow (10,0) CNT, pentagonal ring structures form in the intermediate (15,0) CNT, and a two-layer arrangement forms in the wider (20,0) CNT. Angular distributions show that the influence of carbon polarization on water orientation grows with CNT diameter, accompanied by a pronounced tilt of water molecules toward the CNT wall. Simulations of vertically aligned CNT arrays demonstrate that intertube interactions significantly impact water dynamics: in stacked (20,0) configurations, intermittent hydrogen-bond lifetimes decrease by 20–25% and layer residence times drop by up to 20% relative to isolated CNTs.
+                </p>
+                <div class="paper-links">
+                  <a class="paper-link" href="https://doi.org/10.1021/acsnano.5c17458" target="_blank" rel="noreferrer">Read paper</a>
+                  <a class="paper-link reprint-link" href="https://doi.org/10.26434/chemrxiv-2025-3znm9" target="_blank" rel="noreferrer">ChemRxiv preprint</a>
+                </div>
+              </details>
+            </article>
+
+            <article class="paper-card reveal-item">
+              <img src="assets/publications/reactive-confined-water.png?v=2" alt="Visual summary for nanoconfined water reactivity paper" />
+              <details>
+                <summary>
+                  <span class="paper-meta">J. Phys. Chem. Lett. | 2025</span>
+                  <strong>Reactivity of Nanoconfined Water Is Modulated by the Properties of Confining Materials</strong>
+                  <span class="summary-authors">Saswata Dasgupta*, <strong>Suman Saha</strong>, Francesco Paesani*</span>
+                </summary>
+                <p>
+                  The autoionization of water, a fundamental process in aqueous chemistry, is profoundly altered under nanoconfinement. The properties of the confining material determine the layer dependence of autoionization, dictating whether reactions are stabilized at the interface or in the subsurface. Under weak water–wall interactions, hydroxide is destabilized at the interface, leading the reaction to proceed preferentially in the subsurface. Conversely, under strong water–wall interactions, the interfacial and subsurface states are nearly isoenergetic, thereby diminishing the selectivity between the two regions. This contrast arises from confinement-enforced coordination motifs where hydronium remains tri-coordinated across environments, while hydroxide is restricted to tetra-coordination at the interface but adopts hypercoordinated states in the subsurface.
+                </p>
+                <div class="paper-links">
+                  <a class="paper-link" href="https://doi.org/10.1021/acs.jpclett.5c02963" target="_blank" rel="noreferrer">Read paper</a>
+                  <a class="paper-link reprint-link" href="https://doi.org/10.26434/chemrxiv-2025-4vmx6" target="_blank" rel="noreferrer">ChemRxiv preprint</a>
+                </div>
+              </details>
+            </article>
+
+            <article class="paper-card reveal-item">
+              <img src="assets/publications/water-autoionization.png?v=2" alt="Visual summary for water autoionization paper" />
+              <details>
+                <summary>
+                  <span class="paper-meta">J. Am. Chem. Soc. | 2025</span>
+                  <strong>Sub-nanometer Confinement Suppresses Autoionization of Water</strong>
+                  <span class="summary-authors">Saswata Dasgupta*, <strong>Suman Saha</strong>, Francesco Paesani*</span>
+                </summary>
+                <p>
+                  Water confined within nanometer-scale environments plays a central role in functional materials for nanofluidic and membrane-based applications, where acid–base equilibria and proton transport govern essential processes such as ion conduction, energy conversion, and chemical separations. At sub-nanometer scales, confinement and interfacial interactions dramatically reshape the molecular landscape, challenging conventional assumptions about pH and chemical reactivity. Here, we combine density-corrected density functional theory with machine-learned interatomic potentials to investigate the autoionization of water confined to quasi-two-dimensional monolayers within sub-nanometer slit pores. We find that extreme confinement markedly suppresses water autoionization, raising the effective p<i>K</i><sub>w</sub> by more than two units. This suppression originates from hydroxide ion destabilization at interfaces, driven by restricted hydrogen bonding, hindered molecular reorientation, and a breakdown of Grotthuss proton transport caused by topological frustration in the hydrogen-bond network.
+                </p>
+                <div class="paper-links">
+                  <a class="paper-link" href="https://doi.org/10.1021/jacs.5c08273" target="_blank" rel="noreferrer">Read paper</a>
+                  <a class="paper-link reprint-link" href="https://doi.org/10.26434/chemrxiv-2025-vtwpr" target="_blank" rel="noreferrer">ChemRxiv preprint</a>
+                </div>
+              </details>
+            </article>
+
+            <article class="paper-card reveal-item">
+              <img src="assets/publications/mof-ion-uptake.png?v=2" alt="Visual summary for MOF-808 ion uptake paper" />
+              <details>
+                <summary>
+                  <span class="paper-meta">Chem. Sci. | 2025</span>
+                  <strong>Thermodynamics of Alkali Metal Ion Uptake from Aqueous Solution in MOF-808</strong>
+                  <span class="summary-authors">Yuanhui Pan†, <strong>Suman Saha†</strong>, Matthew Burigana, Vivek Singh, Omar M. Yaghi, Francesco Paesani*</span>
+                </summary>
+                <p>
+                  The growing global demand for critical metals has intensified the search for sustainable and efficient extraction methods. Metal–organic frameworks (MOFs), with their high surface area and tunable pore structures, offer great potential for selective ion uptake; however, a molecular-level understanding of ion uptake from dilute aqueous solutions remains incomplete. In this study, we employ free-energy calculations and enhanced sampling simulations to investigate alkali metal ion uptake in MOF-808, a prototypical hydrothermally stable MOF. Our results reveal that large pores provide a similarly stable environment for all studied ions, indicating a lack of intrinsic selectivity, whereas small pores exhibit distinct thermodynamic and kinetic preferences that govern ion uptake. Dehydrated alkali metal ions are stable within small pores, and free-energy profiles reveal that their transfer from large to small pores occurs with lower energy barriers than that of water molecules. Among these ions, Li<sup>+</sup> faces the highest barrier due to its strong hydration shell, whereas K<sup>+</sup> exhibits the greatest thermodynamic preference for uptake in its dehydrated state.
+                </p>
+                <div class="paper-links">
+                  <a class="paper-link" href="https://doi.org/10.1039/D5SC01596K" target="_blank" rel="noreferrer">Read paper</a>
+                  <a class="paper-link reprint-link" href="https://doi.org/10.26434/chemrxiv-2025-sv5d1" target="_blank" rel="noreferrer">ChemRxiv preprint</a>
+                </div>
+              </details>
+            </article>
+
+            <article class="paper-card reveal-item">
+              <img src="assets/publications/mbpol-status.png?v=2" alt="Visual summary for MB-pol status paper" />
+              <details>
+                <summary>
+                  <span class="paper-meta">J. Chem. Theory Comput. | 2024</span>
+                  <strong>Current Status of the MB-pol Data-Driven Many-Body Potential for Predictive Simulations of Water Across Different Phases</strong>
+                  <span class="summary-authors">Etienne Palos, Ethan F. Bull-Vulpe, Xuanyu Zhu, Henry Agnew, Shreya Gupta, <strong>Suman Saha</strong>, Francesco Paesani*</span>
+                </summary>
+                <p>
+                  Developing a molecular-level understanding of the properties of water is central to numerous scientific and technological applications. However, accurately modeling water through computer simulations has been a significant challenge due to the complex nature of the hydrogen-bonding network that water molecules form under different thermodynamic conditions. The introduction of the MB-pol data-driven many-body potential energy function marked a significant advancement toward a universal molecular model capable of predicting the structural, thermodynamic, dynamical, and spectroscopic properties of water across all phases. By integrating physics-based and data-driven components, which correctly capture the delicate balance among different many-body interactions, MB-pol achieves chemical and spectroscopic accuracy, enabling realistic molecular simulations of water, from gas-phase clusters to liquid water and ice. In this review, we present a comprehensive overview of the data-driven many-body formalism adopted by MB-pol, highlight the main results and predictions made from computer simulations with MB-pol to date, and discuss the prospects for future extensions.
+                </p>
+                <div class="paper-links">
+                  <a class="paper-link" href="https://doi.org/10.1021/acs.jctc.4c01005" target="_blank" rel="noreferrer">Read paper</a>
+                  <a class="paper-link reprint-link" href="https://doi.org/10.26434/chemrxiv-2024-9r9gn" target="_blank" rel="noreferrer">ChemRxiv preprint</a>
+                </div>
+              </details>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-scroll section-band" id="projects" data-scroll-section="projects" aria-labelledby="projects-title">
+        <div class="scroll-section-inner">
+          <div class="section-heading scroll-section-heading">
+            <p class="eyebrow">GitHub Projects</p>
+            <h2 id="projects-title">Interactive tutorials, scientific coding, and open-source resources.</h2>
+            <p>
+              Educational coding materials and tutorials designed to introduce
+              students and researchers to computational methods.
+            </p>
+            <a class="section-link" href="projects.html">View the full projects page <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <div class="projects-grid scroll-projects-grid">
+            <article class="project-card reveal-item">
+              <img src="assets/md_tutorial_preview.png" alt="Molecular Dynamics Tutorial for Beginners" class="project-image" />
+              <div class="project-info">
+                <div>
+                  <span class="project-tag">Interactive Jupyter Book</span>
+                  <h3>Molecular Dynamics Tutorial for Beginners</h3>
+                  <p>
+                    An interactive, module-based Jupyter Book guiding beginners through classical molecular simulations. Write toy molecular dynamics codes in Python from scratch—starting from Verlet integration and equations of motion, up to multi-atom structures with live visual outputs and LaTeX math formatting.
+                  </p>
+                </div>
+                <details class="project-accordion">
+                  <summary class="project-accordion-summary">
+                    <div class="project-links">
+                      <a class="project-link" href="https://24ssuman.github.io/md-tutorial/intro.html" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Interactive Tutorial Page</a>
+                      <a class="project-repo" href="https://github.com/24ssuman/md-tutorial" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">GitHub Repo</a>
+                      <span class="project-details-btn">More Details</span>
+                    </div>
+                  </summary>
+                  <div class="project-details-content">
+                    <ul class="project-detail-list">
+                      <li><strong>Module-Based Learning:</strong> Starts with basic physical formulations (Verlet integration, equations of motion) and scales to multi-atom structures.</li>
+                      <li><strong>Hands-On Coding:</strong> Contains structured Python notebooks where students write toy molecular dynamics codes from scratch.</li>
+                      <li><strong>Interactive Elements:</strong> Incorporates math formatting (MathJax), parameter controls, and live visual output.</li>
+                    </ul>
+                  </div>
+                </details>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-scroll" id="beyond-the-lab" data-scroll-section="beyond-the-lab" aria-labelledby="beyond-title">
+        <div class="scroll-section-inner">
+          <div class="section-heading scroll-section-heading">
+            <p class="eyebrow">Beyond the Lab</p>
+            <h2 id="beyond-title">Teaching, talks, awards, and community.</h2>
+            <p>Classroom instruction, conference presentations, scholastic achievements, and outreach activities.</p>
+            <a class="section-link" href="beyond-the-lab.html">View the full Beyond the Lab page <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <div class="scroll-subsection">
+            <div class="section-heading"><p class="eyebrow">Teaching &amp; Mentorship</p><h3>Student-facing work.</h3></div>
+            <ul class="timeline">
+              <li class="reveal-item"><span>Sep. 2024 - May 2026</span> Mentor, <a href="https://education.sdsc.edu/studenttech/map-home/" target="_blank" rel="noreferrer">UCSD Mentor Assistance Program (MAP)</a> at the San Diego Supercomputer Center.</li>
+              <li class="reveal-item"><span>Spring 2025</span> Graduate Teaching Assistant, General Chemistry Lectures (CHEM 6B), UC San Diego.</li>
+              <li class="reveal-item"><span>Spring 2024</span> Graduate Teaching Assistant, General Chemistry Lab (CHEM 7L), UC San Diego.</li>
+              <li class="reveal-item"><span>Winter 2024</span> Graduate Teaching Assistant, General Chemistry Lab (CHEM 7L), UC San Diego.</li>
+              <li class="reveal-item"><span>Fall 2023</span> Graduate Teaching Assistant, General Chemistry Lectures (CHEM 6A), UC San Diego.</li>
+              <li class="reveal-item"><span>Mar. 2021 - May 2022</span> Doubt Clearing Educator (Online), Unacademy.</li>
+              <li class="reveal-item"><span>Jul. 2021 - Aug. 2023</span> Subject Matter Expert (Online), Chegg.</li>
+            </ul>
+          </div>
+
+          <div class="scroll-subsection">
+            <div class="conference-panel">
+              <div class="section-heading conference-heading">
+                <p class="eyebrow">Conferences &amp; Workshops</p>
+                <h3>Talks, posters, and tutorials.</h3>
+                <p>Selected presentations and hands-on workshops spanning aqueous chemistry, confinement, and molecular simulation.</p>
+              </div>
+              <ol class="conference-list">
+                <li class="reveal-item">
+                  <span class="date">Aug. 2026</span>
+                  <strong>American Chemical Society 2026 Meeting</strong>
+                  <p>Oral: &ldquo;Hydration free energies of alkali and halide ions using data-driven many-body models.&rdquo;</p>
+                </li>
+                <li class="reveal-item">
+                  <span class="date">Jun. 2026</span>
+                  <strong>CECAM Flagship Workshop on Physics-aware Machine Learning for Molecules and Materials</strong>
+                  <p>Poster: &ldquo;Hydration Free Energies of Alkali Metal and Halide Ions Using Data-Driven Many-Body Models.&rdquo;</p>
+                </li>
+                <li class="reveal-item">
+                  <span class="date">Mar. 2026</span>
+                  <strong>Global Physics Summit 2026</strong>
+                  <p>Talk: &ldquo;Confinement-Governed Autoionization of Nanolayered Water.&rdquo;</p>
+                </li>
+                <li class="reveal-item">
+                  <span class="date">Feb. 2026</span>
+                  <strong>SoCal TheoChem 8 Symposium</strong>
+                  <p>Poster: &ldquo;Thermodynamics of Alkali Metal Ions in MOF-808.&rdquo;</p>
+                </li>
+                <li class="reveal-item">
+                  <span class="date">Aug. 2025</span>
+                  <strong>Chemistry and Physics of Liquids, Gordon Research Conference</strong>
+                  <p>Poster: &ldquo;Thermodynamics of Alkali Metal Ion Uptake from Aqueous Solution in MOF-808.&rdquo;</p>
+                </li>
+                <li class="reveal-item">
+                  <span class="date">Jul. 2025</span>
+                  <strong>Quantum-Mechanical, Data-driven, &amp; Multi-scale Simulation of Complex System Workshop</strong>
+                  <p>Presented a hands-on tutorial on molecular simulations using the MB-nrg potential with MBX and LAMMPS.</p>
+                </li>
+                <li class="reveal-item">
+                  <span class="date">Mar. 2025</span>
+                  <strong>American Chemical Society 2025 Meeting</strong>
+                  <p>Poster: &ldquo;Accurate Modeling of Aqueous Phase Chemistry with Rigorous Physical Principles.&rdquo;</p>
+                </li>
+                <li class="reveal-item">
+                  <span class="date">Mar. 2025</span>
+                  <strong>Joint March Meeting and April Meeting: Global Physics Summit 2025</strong>
+                  <p>Poster: &ldquo;Accurate Computational Modeling of Aqueous Phase Chemistry Across Phases and Interfaces.&rdquo;</p>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="scroll-subsection">
+            <div class="section-heading"><p class="eyebrow">Scholastic Achievements</p><h3>Awards and fellowships.</h3></div>
+            <div class="recognition-grid">
+              <article class="card reveal-item">
+                <p class="date">2026</p>
+                <h3>Teddy Traylor Award</h3>
+                <p>Prestigious departmental honor from the Department of Chemistry and Biochemistry at UC San Diego, established to recognize graduate research excellence.</p>
+              </article>
+              <article class="card reveal-item">
+                <p class="date">2022</p>
+                <h3>Academic Excellence in M.S. Chemistry</h3>
+                <p>Merit for Academic Excellence in the Master of Science in Chemistry at IIT Kanpur for the year 2021&ndash;2022.</p>
+              </article>
+              <article class="card reveal-item">
+                <p class="date">2021</p>
+                <h3>All India Rank 80, IIT-JAM&rsquo;21</h3>
+                <p>Secured All India Rank 80 in IIT-JAM&rsquo;21 (Joint Admission Test for Masters), Chemistry.</p>
+              </article>
+              <article class="card reveal-item">
+                <p class="date">2018 - 2023</p>
+                <h3>INSPIRE Fellowship</h3>
+                <p>$5,000 fellowship from the Government of India for outstanding undergraduate students, awarded for five years.</p>
+              </article>
+              <article class="card reveal-item">
+                <p class="date">2016 - 2018</p>
+                <h3>JBNSTS Fellowship</h3>
+                <p>$700 fellowship from the Government of West Bengal (Jagadish Bose National Science Talent Search) for excellence in higher education.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="scroll-subsection">
+            <div class="section-heading"><p class="eyebrow">Activities</p><h3>Community and outreach.</h3></div>
+            <ul class="timeline">
+              <li class="reveal-item"><span>Mar. 2021 - Ongoing</span> Curator at <a href="https://deepstash.com/u/ssuman24" target="_blank" rel="noreferrer">Deepstash (ssuman24)</a>. Publishing small articles on summaries of self-help books.</li>
+              <li class="reveal-item"><span>Feb. 2019 - Apr. 2019</span> Taught underprivileged children for 12 weeks in an evening school under St. Xavier&rsquo;s School, Kolkata.</li>
+              <li class="reveal-item"><span>Jan. 2020</span> Core Committee Member at National Seminar &ldquo;Recent Advances in Chemical and Biological Sciences: International Chapter&rdquo; held at St. Xavier&rsquo;s College, Kolkata.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
 
     <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
@@ -155,10 +561,10 @@
           <p>Ph.D. Candidate in Chemistry, UC San Diego.</p>
         </div>
         <nav class="footer-links" aria-label="Footer navigation">
-          <a href="research.html">Research</a>
-          <a href="publications.html">Publications</a>
-          <a href="projects.html">GitHub Projects</a>
-          <a href="beyond-the-lab.html">Beyond the Lab</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#projects">GitHub Projects</a>
+          <a href="#beyond-the-lab">Beyond the Lab</a>
         </nav>
         <nav class="footer-links" aria-label="Elsewhere">
           <a href="mailto:s7saha@ucsd.edu">Email</a>
@@ -169,6 +575,6 @@
       </div>
       <p class="footer-meta">Last updated August 2026.</p>
     </footer>
-    <script src="assets/animation.js"></script>
+    <script src="assets/animation.js?v=20260828"></script>
   </body>
 </html>
