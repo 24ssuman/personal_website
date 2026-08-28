@@ -1381,12 +1381,6 @@ h3 {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 24px 60px rgba(8, 24, 26, 0.42);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.hero-portrait:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 30px 70px rgba(8, 24, 26, 0.5);
 }
 
 .hero-portrait img {
@@ -1637,7 +1631,7 @@ h3 {
   border-radius: 50%;
   background: conic-gradient(from 210deg, rgba(240, 180, 146, 0.95), rgba(96, 190, 197, 0.9), rgba(240, 180, 146, 0.95));
   box-shadow: 0 26px 62px rgba(4, 18, 20, 0.55);
-  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  transition: box-shadow 0.45s ease;
 }
 
 .portrait-ring::after {
@@ -1650,7 +1644,6 @@ h3 {
 }
 
 .hero-portrait:hover .portrait-ring {
-  transform: translateY(-5px) scale(1.015);
   box-shadow: 0 34px 72px rgba(4, 18, 20, 0.62);
 }
 
