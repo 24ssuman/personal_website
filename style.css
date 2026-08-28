@@ -265,7 +265,7 @@ h3 {
   min-height: 300px;
   padding: 4rem 1.5rem 3rem;
   background:
-    linear-gradient(90deg, rgba(13, 20, 19, 0.82) 0%, rgba(13, 20, 19, 0.62) 38%, rgba(13, 20, 19, 0.18) 72%),
+    linear-gradient(100deg, rgba(9, 17, 18, 0.93) 0%, rgba(9, 17, 18, 0.82) 42%, rgba(9, 17, 18, 0.46) 78%, rgba(9, 17, 18, 0.34) 100%),
     var(--paper-strong) center / cover no-repeat;
   border-bottom: 1px solid rgba(13, 20, 19, 0.14);
   overflow: hidden;
@@ -293,7 +293,7 @@ h3 {
 /* Per-page background images */
 .page-hero-research {
   background-image:
-    linear-gradient(90deg, rgba(13, 20, 19, 0.82) 0%, rgba(13, 20, 19, 0.62) 38%, rgba(13, 20, 19, 0.18) 72%),
+    linear-gradient(100deg, rgba(9, 17, 18, 0.93) 0%, rgba(9, 17, 18, 0.82) 42%, rgba(9, 17, 18, 0.46) 78%, rgba(9, 17, 18, 0.34) 100%),
     url("assets/banner-research.png");
   background-size: cover;
   background-position: center;
@@ -301,7 +301,7 @@ h3 {
 
 .page-hero-publications {
   background-image:
-    linear-gradient(90deg, rgba(13, 20, 19, 0.82) 0%, rgba(13, 20, 19, 0.62) 38%, rgba(13, 20, 19, 0.18) 72%),
+    linear-gradient(100deg, rgba(9, 17, 18, 0.93) 0%, rgba(9, 17, 18, 0.82) 42%, rgba(9, 17, 18, 0.46) 78%, rgba(9, 17, 18, 0.34) 100%),
     url("assets/banner-publications.png");
   background-size: cover;
   background-position: center;
@@ -309,7 +309,7 @@ h3 {
 
 .page-hero-projects {
   background-image:
-    linear-gradient(90deg, rgba(13, 20, 19, 0.82) 0%, rgba(13, 20, 19, 0.62) 38%, rgba(13, 20, 19, 0.18) 72%),
+    linear-gradient(100deg, rgba(9, 17, 18, 0.93) 0%, rgba(9, 17, 18, 0.82) 42%, rgba(9, 17, 18, 0.46) 78%, rgba(9, 17, 18, 0.34) 100%),
     url("assets/banner-projects.png");
   background-size: cover;
   background-position: center;
@@ -317,7 +317,7 @@ h3 {
 
 .page-hero-beyond-the-lab {
   background-image:
-    linear-gradient(90deg, rgba(13, 20, 19, 0.82) 0%, rgba(13, 20, 19, 0.62) 38%, rgba(13, 20, 19, 0.18) 72%),
+    linear-gradient(100deg, rgba(9, 17, 18, 0.93) 0%, rgba(9, 17, 18, 0.82) 42%, rgba(9, 17, 18, 0.46) 78%, rgba(9, 17, 18, 0.34) 100%),
     url("assets/banner-beyond-the-lab.png");
   background-size: cover;
   background-position: center;
@@ -1336,5 +1336,351 @@ h3 {
 
   .project-links {
     flex-wrap: wrap;
+  }
+}
+
+/* ============================================================
+   2026 refresh: portrait hero, intro band, footer, utilities
+   ============================================================ */
+
+.hero-home {
+  min-height: min(600px, calc(100vh - 64px));
+  padding-block: 4.5rem 4rem;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(240px, 0.95fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.hero-grid .hero-inner {
+  max-width: none;
+}
+
+.hero-grid h1 {
+  font-size: clamp(2.4rem, 4.4vw, 3.5rem);
+}
+
+.hero-grid .hero-copy {
+  max-width: 46ch;
+}
+
+.hero-portrait {
+  position: relative;
+  margin: 0;
+  padding: 0.55rem;
+  background: rgba(255, 250, 240, 0.08);
+  border: 1px solid rgba(255, 250, 240, 0.28);
+  border-radius: 18px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 24px 60px rgba(8, 24, 26, 0.42);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-portrait:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 70px rgba(8, 24, 26, 0.5);
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 18%;
+  border-radius: 13px;
+  filter: saturate(1.02) contrast(1.02);
+}
+
+.hero-portrait figcaption {
+  margin-top: 0.6rem;
+  padding-inline: 0.25rem 0.1rem;
+  color: rgba(246, 234, 215, 0.82);
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.hero-actions a.hero-cta {
+  color: #06282c;
+  background: #f0b492;
+  border-color: #f0b492;
+}
+
+.hero-actions a.hero-cta:hover {
+  background: #fff0e2;
+  border-color: #fff0e2;
+}
+
+/* Intro band */
+.section-intro {
+  padding-bottom: 3.4rem;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.intro-grid .lead {
+  margin-bottom: 0;
+  font-size: 1.12rem;
+  line-height: 1.72;
+  color: var(--muted);
+}
+
+.focus-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.focus-chips li {
+  padding: 0.4rem 0.8rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--teal-dark);
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.focus-chips li:hover {
+  border-color: var(--teal);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(16, 99, 109, 0.1);
+}
+
+/* Nav active state driven by aria-current */
+.nav-links a[aria-current="page"] {
+  color: var(--ink);
+  background: rgba(20, 95, 104, 0.09);
+}
+
+/* Footer */
+.footer {
+  display: block;
+  padding-block: 2.6rem 1.6rem;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 2rem;
+}
+
+.footer-name {
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+}
+
+.footer-links a {
+  width: fit-content;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-links a:hover {
+  border-bottom-color: currentColor;
+}
+
+.footer-meta {
+  margin-top: 1.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+}
+
+/* Back to top */
+.back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 30;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: #fffaf0;
+  background: var(--teal);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  box-shadow: 0 10px 26px rgba(8, 60, 67, 0.32);
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s, background 0.25s;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--teal-dark);
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 2rem;
+  }
+
+  .hero-portrait {
+    order: -1;
+    width: min(260px, 62%);
+  }
+
+  .intro-grid,
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hero legibility: stronger, wider scrim so copy stays readable at every width */
+.hero-home {
+  background:
+    linear-gradient(105deg, rgba(8, 18, 20, 0.94) 0%, rgba(8, 18, 20, 0.86) 30%, rgba(8, 18, 20, 0.58) 62%, rgba(8, 18, 20, 0.42) 100%),
+    url("assets/research-background.png") center / cover no-repeat;
+}
+
+.hero-portrait figcaption {
+  color: rgba(255, 250, 240, 0.9);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 900px) {
+  .hero-home {
+    background:
+      linear-gradient(180deg, rgba(8, 18, 20, 0.9) 0%, rgba(8, 18, 20, 0.88) 100%),
+      url("assets/research-background.png") center / cover no-repeat;
+  }
+
+  .hero-portrait {
+    width: min(220px, 55%);
+  }
+}
+
+/* Page hero: taller banner + reduced dividing weight */
+.page-hero {
+  min-height: 340px;
+}
+
+.page-hero p:not(.eyebrow) {
+  color: #f4efe6;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Circular hero portrait */
+.hero-portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+
+.portrait-ring {
+  position: relative;
+  width: min(310px, 100%);
+  aspect-ratio: 1;
+  padding: 6px;
+  border-radius: 50%;
+  background: conic-gradient(from 210deg, rgba(240, 180, 146, 0.95), rgba(96, 190, 197, 0.9), rgba(240, 180, 146, 0.95));
+  box-shadow: 0 26px 62px rgba(4, 18, 20, 0.55);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.portrait-ring::after {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 250, 240, 0.22);
+  pointer-events: none;
+}
+
+.hero-portrait:hover .portrait-ring {
+  transform: translateY(-5px) scale(1.015);
+  box-shadow: 0 34px 72px rgba(4, 18, 20, 0.62);
+}
+
+.hero-portrait .portrait-ring img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 32%;
+  display: block;
+  border: 3px solid rgba(9, 17, 18, 0.9);
+}
+
+.hero-portrait figcaption {
+  margin-top: 1.15rem;
+  max-width: 24ch;
+}
+
+@media (max-width: 900px) {
+  .hero-portrait {
+    width: auto;
+    align-items: flex-start;
+  }
+
+  .portrait-ring {
+    width: 190px;
+  }
+
+  .hero-portrait figcaption {
+    text-align: left;
   }
 }
