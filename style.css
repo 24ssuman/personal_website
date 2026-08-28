@@ -1712,59 +1712,8 @@ h3 {
   color: var(--muted);
 }
 
-.section-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-top: 0.35rem;
-  color: var(--teal-dark);
-  font-family: "Space Grotesk", "Segoe UI", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.section-link span {
-  transition: transform 0.2s ease;
-}
-
-.section-link:hover span {
-  transform: translate(3px, -2px);
-}
-
 .home-feature-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.scroll-cue {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-  margin-top: 2.2rem;
-  color: rgba(255, 250, 240, 0.84);
-  font-family: "Space Grotesk", "Segoe UI", sans-serif;
-  font-size: 0.86rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.scroll-cue > span:last-child {
-  display: grid;
-  width: 1.65rem;
-  height: 1.65rem;
-  place-items: center;
-  border: 1px solid rgba(255, 250, 240, 0.42);
-  border-radius: 50%;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.scroll-cue:hover {
-  color: #fffaf0;
-}
-
-.scroll-cue:hover > span:last-child {
-  background: rgba(255, 250, 240, 0.16);
-  transform: translateY(3px);
 }
 
 .section-scroll .research-card-body h3 {
