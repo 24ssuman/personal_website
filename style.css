@@ -1192,6 +1192,74 @@ h3 {
   border-radius: 6px;
 }
 
+.md-project-visual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.65rem;
+  min-height: 210px;
+  margin: 1rem;
+  padding: 1.1rem;
+  color: #fff4e8;
+  background:
+    radial-gradient(circle at 78% 20%, rgba(255, 221, 167, 0.5) 0 5px, transparent 6px),
+    radial-gradient(circle at 65% 34%, rgba(255, 221, 167, 0.25) 0 8px, transparent 9px),
+    radial-gradient(circle at 88% 42%, rgba(255, 221, 167, 0.35) 0 4px, transparent 5px),
+    linear-gradient(140deg, #522f32, #87473a 55%, #ac6b42);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.md-project-overline {
+  font-size: 0.65rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.md-project-name {
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.md-project-topics {
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.litscope-project-visual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.65rem;
+  min-height: 210px;
+  margin: 1rem;
+  padding: 1.1rem;
+  color: #f0f6ef;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 31px, rgba(205, 233, 220, 0.08) 31px 32px),
+    linear-gradient(140deg, #193d40, #24565b 55%, #396c62);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.litscope-project-overline {
+  font-size: 0.65rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.litscope-project-name {
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+.litscope-project-topics {
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
 .epoch-project-visual {
   position: relative;
   isolation: isolate;

@@ -16,7 +16,7 @@
     <meta name="author" content="Suman Saha" />
     <meta
       name="description"
-      content="GitHub projects, interactive notebooks, and computational chemistry tutorials developed by Suman Saha."
+      content="GitHub projects, research tools, scientific software, and interactive computational chemistry tutorials developed by Suman Saha."
     />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +25,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=20261022" />
+    <link rel="stylesheet" href="style.css?v=20261023-md" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -58,29 +58,33 @@
         <div class="projects-grid">
           
           <article class="project-card reveal-item" style="max-width: 940px; margin: 0 auto; width: 100%;">
-            <img src="assets/md_tutorial_preview.png" alt="Molecular Dynamics Tutorial for Beginners" class="project-image" />
+            <div class="md-project-visual" aria-hidden="true">
+              <span class="md-project-overline">Interactive Browser Course</span>
+              <strong class="md-project-name">Molecular<br />Dynamics</strong>
+              <span class="md-project-topics">For Beginners · Learn by exploring</span>
+            </div>
             <div class="project-info">
               <div>
-                <span class="project-tag">Interactive Jupyter Book</span>
+                <span class="project-tag">Interactive Browser Course</span>
                 <h3>Molecular Dynamics Tutorial for Beginners</h3>
                 <p>
-                  An interactive, module-based Jupyter Book guiding beginners through classical molecular simulations. Write toy molecular dynamics codes in Python from scratch—starting from Verlet integration and equations of motion, up to multi-atom structures with live visual outputs and LaTeX math formatting.
+                  A beginner-friendly, concept-first course on molecular dynamics and enhanced sampling. Follow the physics and Python code behind each step, then explore live, slider-driven simulations directly in your browser.
                 </p>
               </div>
 
               <details class="project-accordion">
                 <summary class="project-accordion-summary">
                   <div class="project-links">
-                    <a class="project-link" href="https://24ssuman.github.io/md-tutorial/interactive/01-intro.html" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Interactive Tutorial Page</a>
+                    <a class="project-link" href="https://24ssuman.github.io/md-tutorial/interactive/01-intro.html" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Open Interactive Course</a>
                     <a class="project-repo" href="https://github.com/24ssuman/md-tutorial" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">GitHub Repo</a>
                     <span class="project-details-btn">More Details</span>
                   </div>
                 </summary>
                 <div class="project-details-content">
                   <ul style="color: var(--muted); font-size: 0.94rem; margin: 0.8rem 0 0 1.2rem; padding: 0; line-height: 1.5; list-style: disc;">
-                    <li style="margin-bottom: 0.4rem;"><strong>Module-Based Learning:</strong> Starts with basic physical formulations (Verlet integration, equations of motion) and scales to multi-atom structures.</li>
-                    <li style="margin-bottom: 0.4rem;"><strong>Hands-On Coding:</strong> Contains structured Python notebooks where students write toy molecular dynamics codes from scratch.</li>
-                    <li style="margin-bottom: 0.4rem;"><strong>Interactive Elements:</strong> Incorporates math formatting (MathJax), parameter controls, and live visual output.</li>
+                    <li style="margin-bottom: 0.4rem;"><strong>Course Modules:</strong> Progresses from MD fundamentals and forces through sampling, umbrella sampling, metadynamics, and Lennard-Jones fluids, with supplements on collective variables and WHAM.</li>
+                    <li style="margin-bottom: 0.4rem;"><strong>Python Walkthroughs:</strong> Explanations include expandable, copyable Python examples that show the code behind each step.</li>
+                    <li style="margin-bottom: 0.4rem;"><strong>Live Browser Demos:</strong> Adjust sliders and controls to explore simulations and see plots respond in real time.</li>
                   </ul>
                 </div>
               </details>
@@ -114,6 +118,38 @@
                     <li><strong>Explore the sky:</strong> Choose a location and date, then search stars, planets, and comets.</li>
                     <li><strong>Local and offline:</strong> The app downloads its data during setup and runs without an internet connection afterward.</li>
                     <li><strong>Scientific limits:</strong> Planetary positions before about 13,200 BCE use a reduced-model extrapolation; ancient local times are uncertain.</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <article class="project-card reveal-item" style="max-width: 940px; margin: 0 auto; width: 100%;">
+            <div class="litscope-project-visual" aria-hidden="true">
+              <span class="litscope-project-overline">Your research reading desk</span>
+              <strong class="litscope-project-name">LitScope</strong>
+              <span class="litscope-project-topics">Journals · Preprints · Reading queues</span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span class="project-tag">Research Literature Tracker</span>
+                <h3>LitScope — Research Feed &amp; Reading Library</h3>
+                <p>
+                  Keep up with recent journal articles and preprints in one place. LitScope brings research feeds into a searchable library with saved reading queues, journal management, and one-click citation copying. Runs locally with Node.js.
+                </p>
+              </div>
+              <details class="project-accordion">
+                <summary class="project-accordion-summary">
+                  <div class="project-links">
+                    <a class="project-repo" href="https://github.com/24ssuman/LitScope" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">GitHub Repo</a>
+                    <span class="project-details-btn">More Details</span>
+                  </div>
+                </summary>
+                <div class="project-details-content">
+                  <ul class="project-detail-list">
+                    <li><strong>Follow the literature:</strong> Track journals and preprints through RSS and supported APIs, including arXiv and ChemRxiv, and add your own feeds.</li>
+                    <li><strong>Organize your reading:</strong> Save articles, search titles, authors, abstracts, and DOIs, and filter by journal, author, or date.</li>
+                    <li><strong>Make it yours:</strong> Copy citations, export article metadata to CSV, and choose from seven palettes with light and dark modes.</li>
                   </ul>
                 </div>
               </details>
