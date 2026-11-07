@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Colors matching the styling (using Suman's Teal and Rust accents with transparency)
-    const particleColor = "rgba(20, 95, 104, 0.4)"; // Teal
-    const hydrogenColor = "rgba(182, 83, 56, 0.35)"; // Rust
-    const bondColor = "rgba(20, 95, 104, 0.12)"; // Faded Teal
-    const mouseBondColor = "rgba(182, 83, 56, 0.25)"; // Rust bond to cursor
+    // Colors tuned for the dark hero banners (light teal and warm sand accents)
+    const particleColor = "rgba(94, 173, 180, 0.4)"; // Teal
+    const hydrogenColor = "rgba(226, 178, 140, 0.35)"; // Sand
+    const bondColor = "rgba(94, 173, 180, 0.12)"; // Faded Teal
+    const mouseBondColor = "rgba(226, 178, 140, 0.25)"; // Sand bond to cursor
 
     class Particle {
       constructor() {
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (this.type === "O") {
           ctx.beginPath();
           ctx.arc(this.x, this.y, this.radius * 2, 0, Math.PI * 2);
-          ctx.fillStyle = "rgba(20, 95, 104, 0.06)";
+          ctx.fillStyle = "rgba(94, 173, 180, 0.06)";
           ctx.fill();
         }
       }
@@ -189,36 +189,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- 3. Dynamic Smooth Publication Accordions ---
-  const publicationCards = document.querySelectorAll(".paper-card");
-  publicationCards.forEach((card) => {
-    const details = card.querySelector("details");
-    const summary = card.querySelector("summary");
-    
-    if (details && summary) {
-      summary.addEventListener("click", (e) => {
-        // Prevent default browser toggle behavior to animate manually
-        e.preventDefault();
-        
-        const content = details.querySelector("p");
-        const link = details.querySelector(".paper-link");
-        
-        if (details.hasAttribute("open")) {
-          // Close animation
-          card.classList.remove("expanded");
-          setTimeout(() => {
-            details.removeAttribute("open");
-          }, 300); // match transition speed
-        } else {
-          // Open
-          details.setAttribute("open", "");
-          // Allow render before adding expanded class
-          requestAnimationFrame(() => {
-            card.classList.add("expanded");
-          });
-        }
-      });
-    }
+  // --- 3. Publication abstract toggles ---
+  // Abstracts stay visible without JavaScript; with it, they collapse behind
+  // an "Abstract" button that sits alongside the paper links.
+  document.querySelectorAll(".abstract-toggle").forEach((button) => {
+    const panel = document.getElementById(button.getAttribute("aria-controls"));
+    const card = button.closest(".paper-card");
+    if (!panel) return;
+
+    panel.hidden = true;
+    button.addEventListener("click", () => {
+      const open = button.getAttribute("aria-expanded") !== "true";
+      button.setAttribute("aria-expanded", String(open));
+      panel.hidden = !open;
+      if (card) card.classList.toggle("expanded", open);
+    });
   });
 });
 
@@ -248,7 +233,12 @@ document.addEventListener("DOMContentLoaded", () => {
     links.map((link) => [link.getAttribute("href").replace(/^#/, ""), link])
   );
 
+  let activeId = null;
+
   function setActive(id) {
+    if (id === activeId) return;
+    activeId = id;
+
     links.forEach((link) => {
       if (link === linkById.get(id)) {
         link.setAttribute("aria-current", "location");
@@ -256,6 +246,13 @@ document.addEventListener("DOMContentLoaded", () => {
         link.removeAttribute("aria-current");
       }
     });
+
+    // On narrow screens the nav is a horizontal strip; keep the active link visible.
+    const active = linkById.get(id);
+    const strip = active && active.parentElement;
+    if (strip && strip.scrollWidth > strip.clientWidth) {
+      strip.scrollTo({ left: Math.max(0, active.offsetLeft - 24), behavior: "smooth" });
+    }
   }
 
   function updateActiveSection() {
