@@ -20,7 +20,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Suman Saha | Computational Chemistry" />
-    <meta property="og:description" content="Ph.D. candidate at UC San Diego studying hydration thermodynamics, ion transport, nanoconfined water, and MOF adsorption with data-driven many-body potentials." />
+    <meta property="og:description" content="Ph.D. candidate at UC San Diego studying ion hydration, nanoconfined water, and ion uptake and transport in metal&ndash;organic frameworks with data-driven many-body potentials and molecular simulation." />
     <meta property="og:image" content="assets/suman-portrait.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -31,7 +31,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=20261107" />
+    <link rel="stylesheet" href="style.css?v=20261107d" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -102,6 +102,7 @@
               <li>Ion transport</li>
               <li>Nanoconfined water</li>
               <li>MOF adsorption</li>
+              <li>Enzyme catalysis</li>
               <li>Many-body potentials</li>
               <li>Machine learning</li>
             </ul>
@@ -149,18 +150,23 @@
               <img src="assets/research_hydration.svg?v=20261107" alt="Illustration of a sodium ion surrounded by its first and second shells of hydrogen-bonded water molecules" class="research-card-image" loading="lazy" decoding="async" />
               <div class="research-card-body">
                 <p class="card-kicker">Hydration</p>
-                <h3>Free energies of ions in water</h3>
+                <h3>Ions in water from many-body potentials</h3>
                 <p>
-                  Staged alchemical free-energy calculations for alkali metal and
-                  halide ions using MB-pol water, MB-nrg ion potentials, and
-                  many-body electrostatics.
+                  Building and testing MB-pol water and MB-nrg ion models, from
+                  high-level ion&ndash;water cluster data to bulk solution, and using
+                  them in staged alchemical free-energy calculations for alkali
+                  metal and halide ions.
                 </p>
                 <details class="related-pubs">
-                  <summary class="related-pubs-btn">Related Publications</summary>
+                  <summary class="related-pubs-btn">Related Publications <span class="pub-count">(3)</span></summary>
                   <ul class="related-pubs-list">
                     <li>
                       <a href="https://doi.org/10.1021/acs.jctc.6c00391" target="_blank" rel="noreferrer">Hydration Free Energies of Alkali Metal and Halide Ions from Data-Driven Many-Body Potentials</a>
                       <span class="related-pub-meta">J. Chem. Theory Comput. | 2026</span>
+                    </li>
+                    <li>
+                      <a href="https://doi.org/10.26434/chemrxiv.15008896/v2" target="_blank" rel="noreferrer">Single-Ion Hydration Through the Lens of Data-Driven Many-Body Potentials</a>
+                      <span class="related-pub-meta">ChemRxiv | 2026 <span class="pub-badge">Preprint</span></span>
                     </li>
                     <li>
                       <a href="https://doi.org/10.1021/acs.jctc.4c01005" target="_blank" rel="noreferrer">Current Status of the MB-pol Data-Driven Many-Body Potential for Predictive Simulations of Water Across Different Phases</a>
@@ -175,14 +181,15 @@
               <img src="assets/research_confinement.svg?v=20261107" alt="Illustration of a water monolayer confined between two carbon sheets, with proton transfer between hydronium and hydroxide ions" class="research-card-image" loading="lazy" decoding="async" />
               <div class="research-card-body">
                 <p class="card-kicker">Interfaces</p>
-                <h3>Nanoconfined water reactivity</h3>
+                <h3>Nanoconfined water: structure and reactivity</h3>
                 <p>
-                  Simulations of how sub-nanometer confinement, interfacial
-                  chemistry, and framework flexibility modulate acid-base equilibria
-                  and proton-transfer pathways.
+                  Simulations of how sub-nanometer confinement and the properties
+                  of the confining walls&mdash;interfacial chemistry, carbon
+                  polarization, and nanotube stacking&mdash;reshape water structure,
+                  dynamics, autoionization, and proton transfer.
                 </p>
                 <details class="related-pubs">
-                  <summary class="related-pubs-btn">Related Publications</summary>
+                  <summary class="related-pubs-btn">Related Publications <span class="pub-count">(3)</span></summary>
                   <ul class="related-pubs-list">
                     <li>
                       <a href="https://doi.org/10.1021/acsnano.5c17458" target="_blank" rel="noreferrer">Carbon Polarization and Carbon Nanotube Stacking Impacts the Behavior of Water in Nanoconfinement</a>
@@ -202,20 +209,49 @@
             </article>
 
             <article class="research-card reveal-item">
-              <img src="assets/research_uptake.svg?v=20261107" alt="Illustration of the MOF-808 framework with hydrated ions in a large pore and a dehydrated ion moving into a small pore" class="research-card-image" loading="lazy" decoding="async" />
+              <img src="assets/research_mof_ions.svg?v=20261107" alt="Illustration of a zirconium metal&ndash;organic framework with hydrated ions in a large pore, a dehydrated ion moving into a small pore, and a lithium ion hopping between linker sites" class="research-card-image" loading="lazy" decoding="async" />
               <div class="research-card-body">
                 <p class="card-kicker">Materials</p>
-                <h3>Ion uptake in MOF-808</h3>
+                <h3>Ions in metal&ndash;organic frameworks</h3>
                 <p>
-                  Enhanced sampling and thermodynamic modeling of alkali metal ion
-                  adsorption from aqueous solution into metal-organic frameworks.
+                  Free-energy calculations, enhanced sampling, and nonequilibrium
+                  molecular dynamics of how framework pores and coordination sites
+                  control ion uptake from water and lithium-ion transport in
+                  quasi-solid electrolytes.
                 </p>
                 <details class="related-pubs">
-                  <summary class="related-pubs-btn">Related Publications</summary>
+                  <summary class="related-pubs-btn">Related Publications <span class="pub-count">(2)</span></summary>
                   <ul class="related-pubs-list">
+                    <li>
+                      <a href="https://doi.org/10.26434/chemrxiv.15008063/v1" target="_blank" rel="noreferrer">Molecular Origins of Lithium-Ion Transport in the Anionic Metal&ndash;Organic Framework SU-102</a>
+                      <span class="related-pub-meta">ChemRxiv | 2026 <span class="pub-badge">Preprint</span></span>
+                    </li>
                     <li>
                       <a href="https://doi.org/10.1039/D5SC01596K" target="_blank" rel="noreferrer">Thermodynamics of Alkali Metal Ion Uptake from Aqueous Solution in MOF-808</a>
                       <span class="related-pub-meta">Chem. Sci. | 2025</span>
+                    </li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+
+            <article class="research-card reveal-item">
+              <img src="assets/research_enzyme.svg?v=20261107" alt="Illustration of a serine &beta;-lactamase acyl&ndash;enzyme intermediate, where a methyl group blocks the hydrolytic water molecule from reaching the acyl carbon" class="research-card-image" loading="lazy" decoding="async" />
+              <div class="research-card-body">
+                <p class="card-kicker">Biomolecules</p>
+                <h3>Enzyme catalysis and antibiotic resistance</h3>
+                <p>
+                  Earlier work with the Nair group at IIT Kanpur: molecular
+                  simulations showing that a methyl substitution on a cephalosporin
+                  sterically shields the acyl&ndash;enzyme intermediate from the
+                  hydrolytic water, slowing serine &beta;-lactamase hydrolysis.
+                </p>
+                <details class="related-pubs">
+                  <summary class="related-pubs-btn">Related Publications <span class="pub-count">(1)</span></summary>
+                  <ul class="related-pubs-list">
+                    <li>
+                      <a href="https://doi.org/10.1002/cphc.70414" target="_blank" rel="noreferrer">Steric Induced Inhibition of Serine &beta;-Lactamase Catalyzed Hydrolysis</a>
+                      <span class="related-pub-meta">ChemPhysChem | 2026</span>
                     </li>
                   </ul>
                 </details>
